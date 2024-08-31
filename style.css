@@ -222,3 +222,103 @@ a:hover {
   color: #999;
 }
 /* footer end */
+
+/* Single Product Start*/
+.sp {
+  background-color: white;
+}
+.sp .img-box {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+.img-box img {
+  width: 70%;
+}
+
+.sp-info {
+  background-color: #fff;
+  border-radius: 15px 0px 0px 0px;
+  padding-left: 30px;
+}
+
+.spacer {
+  height: 80vh;
+  background-color: #fff;
+}
+.info-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+}
+
+.back span {
+  border: 1px solid black;
+  border-radius: 25px;
+  margin-right: 5px;
+  font-size: 15px;
+  padding: 10px;
+}
+
+.back p {
+  margin: 0px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* .review-stars {
+  padding: 10px;
+} */
+.review-stars span {
+  font-size: 15px;
+}
+
+.sp-price b {
+  font-size: 2rem;
+}
+
+.sp-price span {
+  text-decoration: line-through;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.quantity-input {
+  width: 50px;
+  text-align: center;
+  margin: 0 5px;
+}
+
+.buy-btn {
+  display: flex;
+  align-items: center;
+}
+
+.cart {
+  display: flex;
+  justify-content: center;
+}
+/* 2nd Section of Single Product  */
+.sp-des {
+  padding-right: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sp-des-img {
+  border-radius: 15px;
+}
+/* Single Product End*/
