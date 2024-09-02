@@ -1,13 +1,27 @@
 :root {
   --gold: #d4af37;
 }
+@import url("https://fonts.googleapis.com/css2?family=Condiment&family=Yellowtail&display=swap");
+* {
+  font-family: "Condiment", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
 a:hover {
   color: var(--gold) !important;
+}
+a:focus {
+  color: var(--gold) !important;
+}
+
+.btn-link-fa span {
+  color: #000;
 }
 
 .btn-primary {
   background-color: black;
   border: 2px solid white;
+  padding: 10px 20px;
   color: white;
   border-radius: 20px;
   display: flex;
@@ -51,6 +65,12 @@ a:hover {
   color: white !important;
 }
 
+#logo-Title {
+  font-family: "Yellowtail", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+}
 .navbar-brand {
   padding-right: 20px;
   border-right: 2px solid white;
@@ -60,6 +80,21 @@ a:hover {
   display: flex;
   align-items: center;
 }
+
+.dropdown-menu {
+  background-color: #000;
+  border-radius: 0px !important;
+}
+.dropdown-item:hover {
+  color: black !important;
+  background-color: var(--gold);
+}
+
+#addCart.selected {
+  background-color: #28a745; /* Green color to indicate selection */
+  color: #fff;
+}
+
 /* navbar end  */
 /* hero section start   */
 .hero-buttons {
@@ -147,7 +182,7 @@ a:hover {
   position: absolute;
   top: 10px;
   left: 10px;
-  background-color: #ef476f;
+  background-color: var(--gold);
   color: white;
   border-radius: 50px;
   padding: 5px 10px;
@@ -181,7 +216,7 @@ a:hover {
 .price {
   font-size: 20px;
   font-weight: bold;
-  color: #ef476f;
+  color: var(--gold);
 }
 .old-price {
   text-decoration: line-through;
@@ -196,6 +231,104 @@ a:hover {
   font-size: 14px;
 }
 /* upcoming products end */
+.custom-background {
+  background-image: url("assets/img/bg2.png"); /* Replace with your image path */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative;
+  height: 60vh; /* Set height to 60vh */
+  z-index: 1; /* Background should be at the lowest level */
+}
+
+.custom-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Lightened overlay */
+  z-index: 2; /* Overlay above the background but below the content */
+}
+
+.cont-bg {
+  z-index: 3; /* Content above both the overlay and the background */
+  position: relative; /* Ensure z-index is respected */
+  display: flex; /* Flexbox to center content */
+  justify-content: center; /* Horizontally center content */
+  align-items: center; /* Vertically center content */
+  height: 100%; /* Ensure content fills the container */
+  text-align: center; /* Center text */
+}
+
+/* newsletter start  */
+.news-sec {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.news-sec img {
+  width: 80%;
+}
+.news-info-right {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+}
+
+.news-info-right p {
+  text-align: end;
+}
+.news-info-left {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+/* newsletter end  */
+/* email newsletter start  */
+.email-news-sec {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.email-news-head {
+  font-size: 3rem;
+}
+.email-info-sec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 80px;
+}
+.custom-input-group {
+  max-width: 500px;
+  margin: auto;
+}
+
+.custom-input {
+  border-radius: 50px 0 0 50px;
+  padding-left: 20px;
+  border: 1px solid #ccc;
+  box-shadow: none;
+}
+
+.custom-button {
+  border-radius: 0 50px 50px 0;
+  padding: 0 15px;
+  background-color: black;
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-button:hover {
+  border: 1px solid black;
+}
+/* email newsletter end  */
 /* footer start  */
 .footer {
   background-color: #000;
@@ -281,6 +414,11 @@ a:hover {
 /* .review-stars {
   padding: 10px;
 } */
+.review-btn {
+  /* padding: 0px 10px !important; */
+  height: 3rem;
+}
+
 .review-stars span {
   font-size: 15px;
 }

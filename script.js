@@ -13,3 +13,29 @@ $(document).ready(function () {
     }
   });
 });
+
+// cart button
+
+document.addEventListener("DOMContentLoaded", function () {
+  let selectedCount = 0;
+
+  // Select all the buttons with class 'add-cart-btn'
+  const addCartButtons = document.querySelectorAll(".add-cart-btn");
+
+  addCartButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      // Toggle selection state
+      const isSelected = button.classList.toggle("selected");
+
+      // Update the selected count
+      if (isSelected) {
+        selectedCount++;
+      } else {
+        selectedCount--;
+      }
+
+      // Update the cart button's count display
+      document.getElementById("selected-count").textContent = selectedCount;
+    });
+  });
+});
