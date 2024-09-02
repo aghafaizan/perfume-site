@@ -1,5 +1,8 @@
+:root {
+  --gold: #d4af37;
+}
 a:hover {
-  color: blueviolet !important;
+  color: var(--gold) !important;
 }
 
 .btn-primary {
@@ -321,4 +324,49 @@ a:hover {
 .sp-des-img {
   border-radius: 15px;
 }
+
+/* 3rd Section  */
+.testimonial-card {
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background-color: #fff;
+  display: flex;
+}
+
+.testimonial-card img {
+  border-radius: 10px;
+}
+.testimonial-img-top {
+  width: 100px;
+  margin-bottom: 15px;
+}
+
+.testimonial-body {
+  text-align: left;
+  margin-left: 20px;
+}
+
+.testimonial-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.testimonial-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+.testimonial-author {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  display: none;
+}
+
 /* Single Product End*/
