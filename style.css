@@ -32,6 +32,10 @@ a:focus {
   border: 2px solid black !important;
   color: black !important;
 }
+
+.btn-outline-secondary:hover {
+  background-color: #000;
+}
 /* topbar start  */
 .topbar {
   background-color: black;
@@ -55,6 +59,9 @@ a:focus {
 }
 /* topbar end  */
 /* navbar start  */
+.navbar-toggler-icon {
+  filter: invert(1); /* Inverts color, so black becomes white and vice versa */
+}
 .navbar {
   background-color: black;
 }
@@ -166,6 +173,10 @@ a:focus {
 }
 /* category section end  */
 /* upcoming products start */
+.card-link {
+  text-decoration: none;
+  color: #000;
+}
 .card-product {
   border-radius: 15px;
   border: 1px solid #ddd;
@@ -212,6 +223,8 @@ a:focus {
 .card-footer {
   border-top: 1px solid #ddd;
   padding-top: 15px;
+  display: flex;
+  justify-content: center;
 }
 .price {
   font-size: 20px;
@@ -353,6 +366,7 @@ a:focus {
   margin-right: 15px;
   display: inline-block;
   transition: color 0.3s;
+  text-decoration: none;
 }
 .footer .social-icons a:hover {
   color: #999;
@@ -461,6 +475,7 @@ a:focus {
 }
 .sp-des-img {
   border-radius: 15px;
+  width: 100%;
 }
 
 /* 3rd Section  */
@@ -508,3 +523,65 @@ a:focus {
 }
 
 /* Single Product End*/
+/* Single Page Start  */
+.spp-title-sec {
+  background-color: #000;
+  padding: 50px 0px;
+}
+
+.spp-info-sec {
+  color: white !important;
+  padding-right: 15%;
+}
+
+.spp-snd-title {
+  padding: 0px 15%;
+}
+.spp-cards {
+  padding: 30px;
+}
+.spp-cards .cd {
+  border: 1px solid black;
+  padding: 20px;
+  margin-right: 0px;
+}
+.spp-card-head {
+  display: flex;
+  justify-content: space-between;
+}
+.spp-card-head span {
+  font-size: 2.5rem;
+  font-weight: 600 !important;
+}
+/* Single Page End  */
+@media screen and (max-width: 768px) {
+  .topbar {
+    display: none;
+  }
+  div.news-info-right {
+    align-items: center;
+  }
+  div.news-info-left {
+    align-items: center;
+  }
+  div.news-sec p {
+    text-align: center;
+  }
+  div.news-sec .imge {
+    display: flex;
+    justify-content: center;
+  }
+  .email-news-head {
+    font-size: 2rem;
+  }
+  .email-info-sec {
+    padding: 20px 20px;
+  }
+  .hero-sec {
+    height: 100%;
+    padding: 30px 04px;
+  }
+  .navbar-brand {
+    border: 0px;
+  }
+}
