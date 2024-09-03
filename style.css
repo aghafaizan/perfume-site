@@ -36,6 +36,9 @@ a:focus {
 .btn-outline-secondary:hover {
   background-color: #000;
 }
+.card-img-top {
+  max-height: 80px;
+}
 /* topbar start  */
 .topbar {
   background-color: black;
@@ -184,7 +187,7 @@ a:focus {
 }
 .card-product img {
   width: 100%;
-  height: auto;
+  max-height: 200px;
   object-fit: contain;
   /* padding: 20px; */
 }
@@ -384,7 +387,9 @@ a:focus {
   justify-content: center;
   border-radius: 15px;
 }
-
+.img-box {
+  max-height: 900px;
+}
 .img-box img {
   width: 70%;
 }

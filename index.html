@@ -31,8 +31,8 @@
           <div class="col-md-6">Monday - Friday 8:00 AM - 9:00 PM</div>
           <div class="col-md-6 topbar-pg-list d-flex justify-content-end">
             <ul>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="about.html">Contact Us</a></li>
+              <li><a href="../about.html">About Us</a></li>
+              <li><a href="../contact.html">Contact Us</a></li>
             </ul>
           </div>
         </div>
@@ -42,7 +42,9 @@
     <!-- navbar start  -->
     <nav class="navbar navbar-expand-lg sticky-top">
       <div class="container">
-        <a class="navbar-brand" id="logo-Title" href="index.html">Paareees Perfumes</a>
+        <a class="navbar-brand" id="logo-Title" href="../index.html"
+          >Paareees Perfumes</a
+        >
         <button
           class="navbar-toggler"
           type="button"
@@ -57,10 +59,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link" aria-current="page" href="../index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="product-archive.html">Products</a>
+              <a class="nav-link" href="../product-archive.html">Products</a>
             </li>
             <!-- dropdown start  -->
             <li class="nav-item dropdown">
@@ -74,8 +76,10 @@
                 Brands
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Brand 01</a></li>
-                <li><a class="dropdown-item" href="#">Brand 02</a></li>
+                <li><a class="dropdown-item" href="../archive/calvin-klein.html">Calvin Klein</a></li>
+                <li><a class="dropdown-item" href="../archive/j-dot.html">J. Jamshed</a></li>
+                <li><a class="dropdown-item" href="../archive/christian-dior.html">Christiab Dior</a></li>
+                <li><a class="dropdown-item" href="../archive/versace.html">Versace</a></li>
               </ul>
             </li>
             <!-- dropdown end  -->
@@ -91,17 +95,17 @@
                 Category
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Male </a></li>
-                <li><a class="dropdown-item" href="#">Female</a></li>
-                <li><a class="dropdown-item" href="#">Unisex</a></li>
+                <li><a class="dropdown-item" href="../archive/category.html#men">Male </a></li>
+                <li><a class="dropdown-item" href="../archive/category.html#female">Female</a></li>
+                <li><a class="dropdown-item" href="../archive/category.html#unisex">Unisex</a></li>
               </ul>
             </li>
             <!-- dropdown 2 end  -->
           </ul>
           <div class="nav-icons-fa">
-            <button type="button" class="btn btn-primary">
+            <!-- <button type="button" class="btn btn-primary">
               <span class="material-symbols-outlined"> person </span>
-            </button>
+            </button> -->
             <button type="button" class="btn btn-primary" id="cart-btn">
               <span class="material-symbols-outlined"
                 >shopping_cart_checkout</span
@@ -112,8 +116,7 @@
         </div>
       </div>
     </nav>
-    <!-- navbar end  -->
-    <div class="container-fluid hero-sec">
+    <!-- navbar end  -->    <div class="container-fluid hero-sec">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-8 col-sm-12 hero-info">
@@ -126,15 +129,15 @@
               voluptatum nisi iusto!
             </p>
             <div class="hero-btns">
-              <button type="button" class="btn btn-primary">
+              <!-- <button type="button" class="btn btn-primary">
                 <span class="material-symbols-outlined">
                   shopping_cart_checkout </span
                 >Primary
-              </button>
-              <button type="button" class="btn btn-primary">
+              </button> -->
+              <button type="button" class="btn btn-primary" onclick="window.location.href='product-archive.html'">
                 <span class="material-symbols-outlined">
                   shopping_cart_checkout </span
-                >Primary
+                >View All
               </button>
             </div>
           </div>
@@ -177,28 +180,22 @@
     <!-- category sec start -->
     <div class="container cat-cont mt-5 mb-5" id="cat-sec">
       <div class="row justify-content-center row-gap-1 column-gap-3">
-        <div class="col-lg-5 col-md-6 col-sm-12 cat-unisex cat-card">
+        <div class="col-lg-5 col-md-6 col-sm-12 cat-unisex cat-card" onclick="window.location.href='archive/category.html#unisex'">
           <h3>Unisex</h3>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Exercitationem magni error consectetur provident at cum numquam quo
-            nesciunt.
+            Unisex perfumes offer a harmonious blend of scents, designed for anyone who values versatility and individuality.
           </p>
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-12 cat-men cat-card">
-          <h3>Unisex</h3>
+        <div class="col-lg-3 col-md-3 col-sm-12 cat-men cat-card" onclick="window.location.href='archive/category.html#men'">
+          <h3>Male</h3>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Exercitationem magni error consectetur provident at cum numquam quo
-            nesciunt.
+            Our male perfumes embody strength and sophistication, with bold and robust scents. From woody and spicy to fresh and citrusy.
           </p>
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-12 cat-women cat-card">
-          <h3>Unisex</h3>
+        <div class="col-lg-3 col-md-3 col-sm-12 cat-women cat-card" onclick="window.location.href='archive/category.html#female'">
+          <h3>Female</h3>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Exercitationem magni error consectetur provident at cum numquam quo
-            nesciunt.
+            Female perfumes celebrate elegance and grace, featuring soft, floral, and fruity notes. Designed to complement femininity.
           </p>
         </div>
       </div>
@@ -372,8 +369,8 @@
           gas, or fine particles in the atmosphere or onto a surface.
         </p>
         <div class="mt-4">
-          <button
-            class="btn btn-outline-light btn-lg d-flex align-items-center"
+          <button onclick="window.location.href='archive/category.html'"
+            class="btn btn-outline-light btn-lg d-flex align-items-center" 
           >
             <span class="material-icons me-2">play_arrow</span> Order Now
           </button>
@@ -395,10 +392,10 @@
               Sprays, in their multifaceted forms, represent a diverse range of
               applications across industries, sciences, arts, and daily life.
             </p>
-            <button type="button" class="btn btn-primary">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='archive/category.html#men'">
               <span class="material-symbols-outlined">
                 shopping_cart_checkout </span
-              >Primary
+              >Men's
             </button>
           </div>
         </div>
@@ -415,10 +412,10 @@
               Sprays, in their multifaceted forms, represent a diverse range of
               applications across industries, sciences, arts, and daily life.
             </p>
-            <button type="button" class="btn btn-primary">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='archive/category.html#female'">
               <span class="material-symbols-outlined">
                 shopping_cart_checkout </span
-              >Primary
+              >Female
             </button>
           </div>
         </div>
