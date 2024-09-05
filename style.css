@@ -118,7 +118,6 @@ a:focus {
   display: flex;
   align-items: center;
   color: white;
-  background-repeat: no-repeat;
 }
 
 .hero-img {

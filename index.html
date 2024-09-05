@@ -106,17 +106,140 @@
             <!-- <button type="button" class="btn btn-primary">
               <span class="material-symbols-outlined"> person </span>
             </button> -->
-            <button type="button" class="btn btn-primary" id="cart-btn">
-              <span class="material-symbols-outlined"
-                >shopping_cart_checkout</span
-              >
+            <button type="button" class="btn btn-primary" id="cart-btn" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas">
+              <span class="material-symbols-outlined">shopping_cart_checkout</span>
               Cart <span id="selected-count">0</span>
             </button>
+            
           </div>
         </div>
       </div>
     </nav>
-    <!-- navbar end  -->    <div class="container-fluid hero-sec">
+    <!-- navbar end  -->  
+         <!-- popup start  -->
+    <div
+    class="modal fade"
+    id="buyNowModal"
+    tabindex="-1"
+    aria-labelledby="buyNowModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="buyNowModalLabel">
+            Enter Your Details
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <form id="buyNowForm">
+            <!-- Name Field -->
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" required />
+              <div class="invalid-feedback">
+                Please enter a valid name (letters only).
+              </div>
+            </div>
+
+            <!-- Email Field -->
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required />
+              <div class="invalid-feedback">
+                Please enter a valid email address.
+              </div>
+            </div>
+
+            <!-- WhatsApp Number Field -->
+            <div class="mb-3">
+              <label for="whatsapp" class="form-label">WhatsApp Number</label>
+              <input type="tel" class="form-control" id="whatsapp" required />
+            </div>
+
+            <!-- Address Field -->
+            <div class="mb-3">
+              <label for="address" class="form-label">Address</label>
+              <textarea
+                class="form-control"
+                id="address"
+                rows="3"
+                required
+              ></textarea>
+              <div class="invalid-feedback">
+                Please provide a valid address.
+              </div>
+            </div>
+
+            <!-- Payment Method -->
+            <div class="mb-3">
+              <label for="payment" class="form-label">Payment Method</label>
+              <input
+                type="text"
+                class="form-control"
+                id="payment"
+                value="Cash on Delivery"
+                readonly
+              />
+            </div>
+
+            <button type="submit" class="btn btn-success">Submit</button>
+          </form>
+
+          <!-- Thank You Message (Hidden initially) -->
+          <div id="thankYouMessage" style="display: none">
+            <p>Thank you for your purchase!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- popup end -->
+    <!-- cart section starts   -->
+     <!-- Cart Offcanvas -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 id="cartOffcanvasLabel">Your Cart</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <!-- Dummy Products -->
+    <div class="cart-item mb-3">
+      <h6>Product 1</h6>
+      <p>Quantity: 2</p>
+      <p>Price: $20</p>
+    </div>
+    <div class="cart-item mb-3">
+      <h6>Product 2</h6>
+      <p>Quantity: 1</p>
+      <p>Price: $15</p>
+    </div>
+    <div class="cart-item mb-3">
+      <h6>Product 3</h6>
+      <p>Quantity: 3</p>
+      <p>Price: $45</p>
+    </div>
+    
+    <!-- Total Price -->
+    <div class="cart-total mt-4">
+      <h5>Total: $80</h5>
+    </div>
+    
+    <!-- Checkout Button -->
+    <button class="btn btn-primary mt-3" data-bs-toggle="modal"
+    data-bs-target="#buyNowModal">Checkout</button>
+  </div>
+</div>
+
+    <!-- cart section end    -->
+    <div class="container-fluid hero-sec">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-8 col-sm-12 hero-info">

@@ -202,7 +202,12 @@
                   </button>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6">
-                  <button type="button" class="btn cart btn-primary w-100">
+                  <button
+                    type="button"
+                    class="btn cart btn-primary w-100"
+                    data-bs-toggle="modal"
+                    data-bs-target="#buyNowModal"
+                  >
                     Buy Now
                   </button>
                 </div>
@@ -213,6 +218,92 @@
         </div>
       </div>
     </div>
+    <!-- popup start  -->
+    <div
+      class="modal fade"
+      id="buyNowModal"
+      tabindex="-1"
+      aria-labelledby="buyNowModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="buyNowModalLabel">
+              Enter Your Details
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="buyNowForm">
+              <!-- Name Field -->
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" required />
+                <div class="invalid-feedback">
+                  Please enter a valid name (letters only).
+                </div>
+              </div>
+
+              <!-- Email Field -->
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required />
+                <div class="invalid-feedback">
+                  Please enter a valid email address.
+                </div>
+              </div>
+
+              <!-- WhatsApp Number Field -->
+              <div class="mb-3">
+                <label for="whatsapp" class="form-label">WhatsApp Number</label>
+                <input type="tel" class="form-control" id="whatsapp" required />
+              </div>
+
+              <!-- Address Field -->
+              <div class="mb-3">
+                <label for="address" class="form-label">Address</label>
+                <textarea
+                  class="form-control"
+                  id="address"
+                  rows="3"
+                  required
+                ></textarea>
+                <div class="invalid-feedback">
+                  Please provide a valid address.
+                </div>
+              </div>
+
+              <!-- Payment Method -->
+              <div class="mb-3">
+                <label for="payment" class="form-label">Payment Method</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="payment"
+                  value="Cash on Delivery"
+                  readonly
+                />
+              </div>
+
+              <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+
+            <!-- Thank You Message (Hidden initially) -->
+            <div id="thankYouMessage" style="display: none">
+              <p>Thank you for your purchase!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- popup end -->
     <!-- 2nd Section Start  -->
     <div class="container mt-5">
       <div class="row">
@@ -490,6 +581,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
   </body>
 </html>
